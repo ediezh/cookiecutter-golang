@@ -109,9 +109,10 @@ spec:
   steps:
     - id: fetch
       name: Create Skeleton
-      action: fetch:cookiecutter
+      action: fetch:template
       input:
         url: ./skeleton
+        cookiecutterCompat: true
         values:
           component_id: ${{ parameters.component_id }}
           project_short_description: ${{ parameters.project_short_description }}
